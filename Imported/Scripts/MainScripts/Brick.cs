@@ -25,7 +25,7 @@ public class Brick : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(rotator * Time.deltaTime);
+        //transform.Rotate(rotator * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision other) {
