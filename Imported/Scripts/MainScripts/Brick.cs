@@ -15,7 +15,7 @@ public class Brick : MonoBehaviour
 
     void Start()
     {
-        transform.Rotate(rotator * (transform.position.x + transform.position.y) * 0.1f);
+        //transform.Rotate(rotator * (transform.position.x + transform.position.y) * 0.1f);
 
         // Get renderer and store original material
         _renderer = GetComponent<Renderer>();
