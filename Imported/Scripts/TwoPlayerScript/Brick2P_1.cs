@@ -15,17 +15,17 @@ public class Brick2P_1 : MonoBehaviour
 
     void Start()
     {
-        transform.Rotate(rotator * (transform.position.x + transform.position.y) * 0.1f);
+        //transform.Rotate(rotator * (transform.position.x + transform.position.y) * 0.1f);
 
         // Get renderer and store original material
         _renderer = GetComponent<Renderer>();
-        _orgMaterial = _renderer.sharedMaterial;
+        _orgMaterial = _renderer.shared Material;
     }
 
 
     void Update()
     {
-        transform.Rotate(rotator * Time.deltaTime);
+        //transform.Rotate(rotator * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision other)
