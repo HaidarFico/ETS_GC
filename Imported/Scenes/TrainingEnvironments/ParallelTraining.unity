@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641484, b: 0.57481885, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028514, g: 0.22571605, b: 0.30692416, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 982198354830889711, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daa66ff8afa8f604b99e90b2c9eaa932, type: 2}
     - target: {fileID: 1633742880214992833, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
       propertyPath: m_Name
       value: Environment (6)
@@ -394,6 +398,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 982198354830889711, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daa66ff8afa8f604b99e90b2c9eaa932, type: 2}
     - target: {fileID: 1633742880214992833, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
       propertyPath: m_Name
       value: Environment (7)
@@ -612,6 +620,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -22.35
       objectReference: {fileID: 0}
+    - target: {fileID: 982198354830889711, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daa66ff8afa8f604b99e90b2c9eaa932, type: 2}
     - target: {fileID: 1633742880214992833, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
       propertyPath: m_Name
       value: Environment (1)
@@ -704,6 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -830,6 +843,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 982198354830889711, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daa66ff8afa8f604b99e90b2c9eaa932, type: 2}
     - target: {fileID: 1633742880214992833, guid: e40f14bc5c0344063bfa9f911bb8a791, type: 3}
       propertyPath: m_Name
       value: Environment

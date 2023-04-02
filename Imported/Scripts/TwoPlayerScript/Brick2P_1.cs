@@ -19,7 +19,7 @@ public class Brick2P_1 : MonoBehaviour
 
         // Get renderer and store original material
         _renderer = GetComponent<Renderer>();
-        _orgMaterial = _renderer.shared Material;
+        _orgMaterial = _renderer.sharedMaterial;
     }
 
 
