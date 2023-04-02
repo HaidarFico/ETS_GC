@@ -1,4 +1,5 @@
 using System.Collections;
+//using System.Diagnostics;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
@@ -50,16 +51,17 @@ public class PlayerAgent : Agent
         // ##############################################################
         // Action System
         // ##############################################################
+        Debug.Log(actions.DiscreteActions[0]);
         float moveX = actions.DiscreteActions[0];
-
+        
         //Debug.Log("Moving agent in: " + actions.DiscreteActions[0]);
 
         // Move paddle right, left, or hold
-        if (moveX == 1)
+        if (moveX == 0)
         {
             transform.localPosition += new Vector3(1 * Time.deltaTime * moveSpeed, 0, 0);
         }
-        else if (moveX == 2)
+        else if (moveX == 1)
         {
             transform.localPosition += new Vector3(-1 * Time.deltaTime * moveSpeed, 0, 0);
         }
@@ -104,7 +106,7 @@ public class PlayerAgent : Agent
     {
 
         ActionSegment<int> continuousActions = actionsOut.DiscreteActions;
-        continuousActions[0] = Mathf.RoundToInt(Input.GetAxis("Horizontal"));
+        continuousActions[0] = Mathf.RoundToInt(Random.Range(0f, 2f));
 
     }
 
