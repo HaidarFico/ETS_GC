@@ -6,10 +6,10 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-public class PaddleAgent3 : Agent //observe paddle and ball position, has been trained for 5M steps, a potential successful model
+public class PaddleAgent3 : Agent 
 {
     float paddleY = -17f;
-    float paddleX = 18f; //agent position of X value
+    float paddleX = 18f;
     float moveSpeed = 50f;
     private float _xValue_to_left;
     private float _xValue_to_right;
@@ -19,9 +19,9 @@ public class PaddleAgent3 : Agent //observe paddle and ball position, has been t
     private int rewardHitBrick;
     private int rewardHitBall;
     private int levelComplete;
-    private int _prevBall = -1; //initialize to -1
+    private int _prevBall = -1; 
     private int _currBall;
-    private int _prevScore = 0; //initialize to 0, to avoid lower than initial current score
+    private int _prevScore = 0;
     private int _currScore;
     //private int brickCount = 0; //how many bricks being hit before ball colliding with paddle
     GameObject currentBall;
@@ -119,21 +119,17 @@ public class PaddleAgent3 : Agent //observe paddle and ball position, has been t
     }*/
 
 
-    // ##############################################################
     // Reward System
-    // ############################################################## 
 
-    //catch a ball with increased reward, reset hitbrick reward
     private void OnCollisionEnter(Collision obj)
     {
-        //Debug.Log("Collision: " + obj.gameObject.name);
+        //Debug.Log("Collision boss: " + obj.gameObject.name);
         if (obj.gameObject == currentBall)
         {        
-            // add ballhit condition to avoid AI get reward by hitting ball without hitting any brick
             if (brickhit == true)
             {
                 brickhit = false;
-                AddReward(rewardHitBall); //reward for catching the ball
+                AddReward(rewardHitBall); 
                 Debug.Log("Positive Reward - catch the ball");
             }
         }

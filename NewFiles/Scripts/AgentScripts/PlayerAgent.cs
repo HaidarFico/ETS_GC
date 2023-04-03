@@ -36,7 +36,7 @@ public class PlayerAgent : Agent
     }
 
 
-    // Resetting the ball for the new episode
+    // Reset level
     public override void OnEpisodeBegin()
     {
         trainingArea.ResetArea();
@@ -48,9 +48,6 @@ public class PlayerAgent : Agent
     // Agent Action
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // ##############################################################
-        // Action System
-        // ##############################################################
         Debug.Log(actions.DiscreteActions[0]);
         float moveX = actions.DiscreteActions[0];
         
@@ -73,11 +70,6 @@ public class PlayerAgent : Agent
         transform.localPosition =  new Vector3(Mathf.Clamp(transform.localPosition.x, leftLimit, rightLimit), transform.localPosition.y, transform.localPosition.z);
     
 
-
-        // ##############################################################
-        // Reward System
-        // ############################################################## 
-        // Apply a negative reward for every step to encourgage action
         if (MaxStep > 0)
         {
             AddReward(-1f / MaxStep);
@@ -114,7 +106,6 @@ public class PlayerAgent : Agent
     {
         if (collision.transform.CompareTag("Ball"))
         {
-            // Add reward for ball 
             AddReward(1f);
         }  
         
@@ -123,7 +114,7 @@ public class PlayerAgent : Agent
     public void BrickDestroyed()
     {
         AddReward(1.0f);
-
+    
         bricks_destroyed++; 
 
         if ((bricks_destroyed / bricks_available) > 0.1f)
